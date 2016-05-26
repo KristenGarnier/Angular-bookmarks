@@ -1,3 +1,3 @@
-# Webpack Angular
+# Simple bookmark angular app
 
-An example of using webpack with an Angular project.
+Made with es6, webpack, angular.

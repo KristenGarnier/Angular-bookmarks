@@ -6,7 +6,7 @@
   "repository": "https://github.com/kentcdodds/webpack-angular.git",
   "scripts": {
     "test": "NODE_ENV=test karma start",
-    "start": "node node_modules/.bin/webpack-dev-server --content-base app",
+    "start": "node node_modules/.bin/webpack-dev-server",
     "build": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html"
   },
   "keywords": [
@@ -24,6 +24,7 @@
     "babel-loader": "6.2.1",
     "babel-preset-es2015": "6.3.13",
     "babel-preset-stage-2": "6.3.13",
+    "chai": "^3.5.0",
     "css-loader": "^0.9.1",
     "file-loader": "^0.8.1",
     "jshint": "^2.6.3",
@@ -33,9 +34,12 @@
     "karma-chrome-launcher": "^0.1.7",
     "karma-mocha": "^0.1.10",
     "karma-webpack": "^1.5.0",
+    "mocha": "^2.4.5",
     "ng-annotate-loader": "0.0.2",
     "nib": "^1.1.0",
+    "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
+    "sass-loader": "^3.1.2",
     "style-loader": "^0.8.3",
     "stylus": "^0.49.3",
     "stylus-loader": "^0.6.0",
@@ -50,6 +54,8 @@
     "angular-aria": "^1.3.14",
     "angular-material": "^0.8.3",
     "angular-messages": "^1.3.14",
-    "angular-ui-router": "^0.2.13"
+    "angular-ui-router": "^0.2.13",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.13.1"
   }
 }

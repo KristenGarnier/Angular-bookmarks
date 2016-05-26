@@ -1,9 +1,13 @@
-import angular from 'angular';
-import registerDirectives from './directives';
+import angular from 'angular'
+import registerController from './controller'
+import normalize from '../assets/css/normalize.css'
+import eggly from '../assets/css/eggly.css'
+import animations from '../assets/css/animations.css'
+
 if (ON_TEST) {
-  require('angular-mocks/angular-mocks');
+  require('angular-mocks/angular-mocks')
 }
 
-const ngModule = angular.module('app', []);
+const ngModule = angular.module('Eggly', [])
 
-registerDirectives(ngModule);
+registerController(ngModule)
