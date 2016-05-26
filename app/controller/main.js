@@ -3,7 +3,6 @@ import {bookmarks, categories} from '../../data/data'
 
 export default (ngModule) => {
   ngModule.controller('MainCtrl', function ($scope) {
-    console.log(categories)
     $scope.categories = categories
 
     $scope.bookmarks = bookmarks

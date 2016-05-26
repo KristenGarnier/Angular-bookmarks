@@ -1,4 +1,5 @@
 import angular from 'angular'
+import uiRouter from 'angular-ui-router'
 import registerController from './controller'
 import normalize from '../assets/css/normalize.css'
 import eggly from '../assets/css/eggly.css'
@@ -8,13 +9,21 @@ import bookmarksModel from './models/bookmark-model'
 import bookmarksModule from './categories/bookmarks/bookmarks'
 import categoriesModule from './categories/categories'
 
-if (ON_TEST) {
-  require('angular-mocks/angular-mocks')
-}
+import templateCategories from './categories/categories.html'
 
+console.log(uiRouter);
 const ngModule = angular.module('Eggly', [
-  'categories',
-  'categories.bookmarks'
-])
+    uiRouter,
+    'categories',
+    'categories.bookmarks'
+  ])
+  .config(($stateProvider) => {
+    $stateProvider
+      .state('eggly', {
+        url: '/',
+        template: templateCategories,
+        controller: 'MainCtrl'
+      })
+  })
 
 registerController(ngModule)
