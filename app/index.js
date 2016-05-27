@@ -1,5 +1,6 @@
 import angular from 'angular'
 import uiRouter from 'angular-ui-router'
+import animate from 'angular-animate'
 import registerController from './controller'
 import registerConfig from './config'
 import normalize from '../assets/css/normalize.css'
@@ -13,10 +14,10 @@ import bookmarksModule from './categories/bookmarks/bookmarks'
 import categoriesModule from './categories/categories'
 
 const ngModule = angular.module('Eggly', [
-    uiRouter,
-    'categories',
-    'categories.bookmarks'
-  ])
+  animate,
+  uiRouter,
+  'categories',
+  'categories.bookmarks'
+])
 
 registerConfig(ngModule)
-//registerController(ngModule)
