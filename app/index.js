@@ -7,6 +7,8 @@ import eggly from '../assets/css/eggly.css'
 import animations from '../assets/css/animations.css'
 import categoriesModel from './models/categories-model'
 import bookmarksModel from './models/bookmark-model'
+import bookmarksCreate from './categories/bookmarks/create/bookmark-create'
+import bookmarksEdit from './categories/bookmarks/edit/bookmark-edit'
 import bookmarksModule from './categories/bookmarks/bookmarks'
 import categoriesModule from './categories/categories'
 
@@ -17,4 +19,4 @@ const ngModule = angular.module('Eggly', [
   ])
 
 registerConfig(ngModule)
-registerController(ngModule)
+//registerController(ngModule)
