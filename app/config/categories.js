@@ -7,13 +7,9 @@ export default (ngModule) => {
       .state('eggly.categories', {
         url: '/',
         views: {
-          'categories@' : {
-            controller: 'CategoriesCtrl',
+          'categories@': {
+            controller: 'CategoriesCtrl as cateCtrl',
             template: templateCategories
-          },
-          'bookmarks@' : {
-            controller: 'BookmarksCtrl',
-            template: templateBookmarks
           }
         }
       })

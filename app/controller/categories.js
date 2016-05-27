@@ -1,5 +1,6 @@
 export default (ngModule) => {
-  ngModule.controller('CategoriesCtrl', ($scope) => {
-
+  ngModule.controller('CategoriesCtrl', function (CategoriesModel) {
+    const vm = this
+    vm.categories = CategoriesModel.getCategories()
   })
 }

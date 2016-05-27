@@ -1,5 +1,6 @@
 import egglyConfig from './main'
 import categoriesConfig from './categories'
+import bookmarksConfig from './bookmarks'
 
 export default (ngModule, name='eggly') => {
   switch (name) {
@@ -8,6 +9,9 @@ export default (ngModule, name='eggly') => {
       break
     case 'categories':
       categoriesConfig(ngModule)
+      break
+    case 'bookmarks':
+      bookmarksConfig(ngModule)
       break
   }
 }

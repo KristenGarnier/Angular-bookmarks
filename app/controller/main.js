@@ -2,16 +2,12 @@ import _ from 'lodash'
 import {bookmarks, categories} from '../../data/data'
 
 export default (ngModule) => {
-  ngModule.controller('MainCtrl', function ($scope) {
-    $scope.categories = categories
-
-    $scope.bookmarks = bookmarks
-
+  ngModule.controller('MainCtrl', function ($scope, $state) {
     $scope.currentCategory = null
 
     const setCurrentCategory = (category) => {
       $scope.currentCategory = category
-
+      $state.go('eggly.categories.bookmarks', {category: category.name})
       $scope.cancelCreating()
       $scope.cancelEditing()
       resetCreateForm()

@@ -8,6 +8,5 @@ const ngModule = angular.module('categories', [
 
 registerConfig(ngModule, 'categories')
 registerController(ngModule, 'categories')
-registerController(ngModule, 'bookmarks')
 
 export default ngModule
